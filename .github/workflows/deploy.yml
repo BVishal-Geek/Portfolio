@@ -1,0 +1,63 @@
+name: Build and Deploy
+description: Build and deploy your application
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        run: npm run deploy
+        uses: BVishal-Geek/Portfolio@v4
+name: Build and Deploy
+description: Build and deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Runs workflow when changes are pushed to the main branch
+
+permissions:
+  contents: write  # Required for deployment
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3  # Fetches the latest code from your repo
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'  # Matches your local Node.js version
+          cache: 'npm'  # Caches dependencies for faster builds
+
+      - name: Install Dependencies
+        run: npm install  # Ensures all required npm packages are installed
+
+      - name: Build
+        run: npm run build  # Builds the project (ensure this outputs a 'build/' folder)
+
+      - name: Deploy to GitHub Pages
+        uses: BVishal-Geek/Portfolio@v4  # Deploys from your own GitHub repo
+        with:
+          branch: gh-pages  # Target branch for GitHub Pages deployment
+          folder: .  # The directory containing built files
+          clean: true  # Ensures old files are removed before deploying
