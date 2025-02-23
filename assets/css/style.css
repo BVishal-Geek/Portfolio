@@ -158,9 +158,6 @@ html { font-family: var(--ff-poppins); }
 body { background: var(--smoky-black); }
 
 
-
-
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -1023,7 +1020,7 @@ main {
   margin-bottom: 10px;
 }
 
-.project-item { display: none; }
+.project-item { display: block !important; }
 
 .project-item.active {
   display: block;
@@ -1683,32 +1680,69 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .article-title { padding-bottom: 20px; }
+  /*-----------------------------------*\
+  #PORTFOLIO FIX
+\*-----------------------------------*/
 
-  .filter-select-box { display: none; }
+/* Ensure projects list is visible */
+.project-list {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centers projects */
+}
 
-  .filter-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    padding-left: 5px;
-    margin-bottom: 30px;
-  }
+/* Ensure each project item is displayed properly */
+.project-item {
+  display: block !important;
+  width: calc(33.333% - 20px); /* Adjust width based on layout */
+  background-color: var(--eerie-black-2);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
 
-  .filter-item button {
-    color: var(--light-gray);
-    font-size: var(--fs-5);
-    transition: var(--transition-1);
-  }
+/* Fix filter list hiding issue */
+.filter-list {
+  display: none;
+}
 
-  .filter-item button:hover { color: var(--light-gray-70); }
+/* Fix project images */
+.project-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
 
-  .filter-item button.active { color: var(--orange-yellow-crayola); }
+/* Fix project title */
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
 
-  /* portfolio and blog grid */
+/* Highlight active navigation */
+.navbar-link {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: 0.3s;
+}
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+.navbar-link.active {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Ensure pages switch correctly */
+article[data-page] {
+  display: none;
+}
+
+article[data-page].active {
+  display: block;
+}
 
 
 
@@ -1964,3 +1998,4 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+

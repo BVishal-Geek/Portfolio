@@ -134,26 +134,40 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-
-
-// page navigation variables
+// Select navigation links and pages
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
+// Function to switch active page
+const switchPage = function (selectedPage) {
+  pages.forEach(page => {
+    if (page.dataset.page === selectedPage) {
+      page.classList.add("active");
+    } else {
+      page.classList.remove("active");
     }
-
   });
-}
+
+  navigationLinks.forEach(link => {
+    if (link.innerText.toLowerCase() === selectedPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+
+  window.scrollTo(0, 0);
+};
+
+// Add event listener to each navigation link
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    const selectedPage = this.innerText.toLowerCase();
+    switchPage(selectedPage);
+  });
+});
+
+// Ensure the default "About" page is active on page load
+document.addEventListener("DOMContentLoaded", function () {
+  switchPage("about");
+});
