@@ -9,6 +9,49 @@ const elementToggleFunc = function (elem) {
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
+
+
+
+
+// Select dropdown and filter items
+const filterSelect = document.querySelector(".filter-select");
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+// Function to filter projects
+const filterProjects = (selectedCategory) => {
+    filterItems.forEach(item => {
+        const category = item.dataset.category.toLowerCase();
+
+        if (selectedCategory === "all" || category === selectedCategory) {
+            item.style.display = "block";  // Show matching projects
+        } else {
+            item.style.display = "none";  // Hide non-matching projects
+        }
+    });
+};
+
+// Handle dropdown selection
+document.querySelectorAll("[data-select-item]").forEach(button => {
+    button.addEventListener("click", function () {
+        const selectedCategory = this.innerText.toLowerCase().trim();
+
+        // Update dropdown text
+        filterSelect.querySelector(".select-value").innerText = this.innerText;
+
+        // Close dropdown
+        filterSelect.classList.remove("active");
+
+        // Apply filtering
+        filterProjects(selectedCategory);
+    });
+});
+
+
+
+
+
+
+
 // Sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () {
     elementToggleFunc(sidebar);
@@ -47,90 +90,72 @@ testimonialsItem.forEach(item => {
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
-// **Fix: Show all project items by default**
+// **Ensure all project items are visible by default**
 document.querySelectorAll('.project-item').forEach(item => {
-    item.style.display = "block";  // Ensure all projects are visible
+    item.style.display = "block";  // Make sure all projects show up
 });
 
 // Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// Add event to all nav links for page switching
-navigationLinks.forEach(link => {
-    link.addEventListener("click", function () {
-        const pageName = this.innerHTML.toLowerCase().trim();
-
-        pages.forEach(page => {
-            if (page.dataset.page === pageName) {
-                page.classList.add("active");
-                link.classList.add("active");
-                window.scrollTo(0, 0);
-            } else {
-                page.classList.remove("active");
-                navigationLinks.forEach(nav => nav.classList.remove("active"));
-            }
-        });
-
-        this.classList.add("active"); // Keep the active tab highlighted
-    });
-});
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-// Select navigation links and pages
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
 // Function to switch active page
 const switchPage = function (selectedPage) {
-  pages.forEach(page => {
-    if (page.dataset.page === selectedPage) {
-      page.classList.add("active");
-    } else {
-      page.classList.remove("active");
-    }
-  });
+    pages.forEach(page => {
+        if (page.dataset.page === selectedPage) {
+            page.classList.add("active");
+        } else {
+            page.classList.remove("active");
+        }
+    });
 
-  navigationLinks.forEach(link => {
-    if (link.innerText.toLowerCase() === selectedPage) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
+    navigationLinks.forEach(link => {
+        if (link.innerText.toLowerCase().trim() === selectedPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
 
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 };
+
+
+document.querySelector(".filter-select").addEventListener("click", function () {
+  this.classList.toggle("active"); // Toggles the dropdown visibility
+});
+
+document.querySelectorAll("[data-select-item]").forEach(item => {
+  item.addEventListener("click", function (event) {
+      event.stopPropagation(); // Prevents closing dropdown immediately
+      document.querySelector(".filter-select").classList.remove("active");
+  });
+});
 
 // Add event listener to each navigation link
 navigationLinks.forEach(link => {
-  link.addEventListener("click", function () {
-    const selectedPage = this.innerText.toLowerCase();
-    switchPage(selectedPage);
-  });
+    link.addEventListener("click", function () {
+        const selectedPage = this.innerText.toLowerCase().trim();
+        switchPage(selectedPage);
+    });
 });
 
 // Ensure the default "About" page is active on page load
 document.addEventListener("DOMContentLoaded", function () {
-  switchPage("about");
+    switchPage("about");
+});
+
+// Contact form validation
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+formInputs.forEach(input => {
+    input.addEventListener("input", function () {
+        if (form.checkValidity()) {
+            formBtn.removeAttribute("disabled");
+        } else {
+            formBtn.setAttribute("disabled", "");
+        }
+    });
 });

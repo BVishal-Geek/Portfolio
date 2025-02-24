@@ -41,17 +41,17 @@
 
       <div class="sidebar-info">
 
-        <figure class="avatar-box-profile">
-          <img src="./assets/images/vishal.jpeg" alt="Vishal Bakshi" width="80">
+        <figure class="avatar-box">
+          <img src="./assets/images/vishal.jpeg" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Vishal Bakshi">Vishal Bakshi</h1>
-
-          <p class="title">Machine Learning Engineer<br></p>
-          <p class="title">M.S. Data Science</p>
-          <p class="title">George Washington University</p>
-        </div>
+            <h1 class="name" title="Vishal Bakshi">Vishal Bakshi</h1>
+  
+            <p class="title">Machine Learning Engineer<br></p>
+            <p class="title">M.S. Data Science</p>
+            <p class="title">George Washington University</p>
+          </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -132,12 +132,18 @@
           <li class="social-item">
             <a href="https://www.linkedin.com/in/vishal-bakshi/" class="social-link" target="_blank">
               <ion-icon name="logo-linkedin"></ion-icon>
-    
+            </a>
           </li>
 
           <li class="social-item">
             <a href="https://github.com/BVishal-Geek" class="social-link" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/BVishal-Geek" class="social-link" target="_blank">
+              <ion-icon name="logo-leetcode"></ion-icon>
             </a>
           </li>
 
@@ -170,11 +176,19 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link>Work Experience</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Skills</button>
+          </li>
+
+          <li class="navbar-item">
+            <a class="navbar-link" href="assets/resume/Vishal's Resume .pdf" target="_blank">Resume</a>
           </li>
 
           <li class="navbar-item">
@@ -186,15 +200,12 @@
       </nav>
 
 
-
-
-
       <!--
         - #ABOUT
       -->
 
       <article class="about  active" data-page="about">
-
+        <br><br>
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
@@ -314,28 +325,6 @@
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>P.S.V. Kishhaan, CEO HBOTS Robotics Pvt Ltd</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Vishal worked as a Machine Learning Engineer at HBOTS Robotics Pvt Ltd for 13 months, where he demonstrated strong skills in developing deep learning models for object recognition and volume estimation. 
-                    He was one of our top performers, particularly when it came to pitching and executing complex ideas. Vishal also successfully led a highly technical workshop for 800 students on his own. His ability to deliver outstanding results makes him an exceptional talent.
-                    <br>
-                    <br>
-                    you can reach me out at:<a href="mailto:Kisshhan@hbotsrobotics.com" style="color: lightblue;">Kisshhan@hbotsrobotics.com</a>
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
                   <img src="./assets/images/my-avatar.png" alt="Emily evans" width="60" data-testimonials-avatar>
                 </figure>
 
@@ -354,12 +343,76 @@
               </div>
             </li>
 
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>P.S.V. Kishhaan, CEO HBOTS Robotics Pvt Ltd</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Vishal worked as a Machine Learning Engineer at HBOTS Robotics Pvt Ltd for 13 months, where he demonstrated strong skills in developing deep learning models for object recognition and volume estimation. 
+                    He was one of our top performers, particularly when it came to pitching and executing complex ideas. Vishal also successfully led a highly technical workshop for 800 students on his own. His ability to deliver outstanding results makes him an exceptional talent.
+                    <br>
+                    <br>
+                    you can reach me out at:<a href="mailto:Kisshhan@hbotsrobotics.com" style="color: lightblue;">Kisshhan@hbotsrobotics.com</a>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
           </ul>
 
         </section>
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
       </article>
-
-
 
 
 
@@ -367,19 +420,15 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
-
+      <article class="work experience" data-page="work experience">
+        <br><br>
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title">Work Experience</h2>
         </header>
 
-        <body>
-          <a class="download-btn" download href="assets/resume/Vishal_Bakshi_Resume.pdf">Download Resume</a>
-
-        </body>
+        <a class="download-btn" href="assets/resume/Vishal_Bakshi_Resume.pdf" target="_blank">View Resume</a>
         
 
-        
         <section class="timeline">
 
           <div class="title-wrapper">
@@ -394,39 +443,57 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">George Washington University: Research Assistant</h4>
+              <h4 class="h4 timeline-item-title">Machine Learning Engineer</h4>
 
-              <span>04/2024 — 08/2024</span>
+              <span>June, 2022 - Aug, 2023</span>
 
               <p class="timeline-text">
-                As a Research Assistant at the School of Public Policy, I collaborated with NOVA (Northern Virginia) and NLx (National Labor Exchange) on a project focused on collecting and analyzing job descriptions. 
-                The objective was to develop a taxonomy of skills using clustering algorithms, enabling the matching of individual résumés to relevant job descriptions based on skill sets.
+                Developed and deployed an object detection and classification model using MobileNet V1 in PyTorch for real-time product
+                recognition, volume estimation, and inventory tracking, enhancing object detection accuracy by 35%.
+              </p>
+              <p class="timeline-text">
+                Led a cross-functional ML project, integrating computer vision-based entity resolution for autonomous robotics
+                applications, improving product scanning and segmentation efficiency.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">HBots Robotics Pvt Ltd: Machine Learning Engineer</h4>
+              <h4 class="h4 timeline-item-title">Machine Learning Intern</h4>
 
-              <span>06/2022 — 08/2023</span>
+              <span>Jan, 2021 - Jan, 2022</span>
 
               <p class="timeline-text">
-                Developed and deployed an efficient object detection model using MobileNet V1 in PyTorch for real-time detection, 
-                and created an automated image labeling algorithm, reducing labeling time by 90% and training time by 40%.
+                Developed an automated ETL pipeline to preprocess student performance data, reducing data cleaning time by 60%.
+              </p>
+              <p class="timeline-text">
+                Built a predictive model using MLFlow and SageMaker, achieving 98% adjusted R squared accuracy in student performance
+                analysis
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">The UnEarth: Associate Research & Development Intern (Non-Profit)</h4>
+              <h4 class="h4 timeline-item-title">Robotics Engineeer</h4>
 
-              <span>2010 — 2013</span>
+              <span>Mar, 2020 - Dec, 2020</span>
 
               <p class="timeline-text">
-                Developed a high-accuracy student performance prediction model (98% adjusted R-squared, MAE: 1.6) using linear regression and scaling techniques. 
-                Conducted workshops for 200+ students on machine learning and robotics.
+                Developed and deployed an ROS 1-based 4WD Unmanned Ground Vehicle (UGV) with 2D SLAM for real-time
+                autonomous navigation, enhancing system reliability and mapping accuracy.
+              </p>
+              <p class="timeline-text">
+                Designed and implemented a PyQt5-based robotic control dashboard to remotely monitor battery status, trigger SLAM,
+                store 2D maps, and live video streaming, allowing real-time robot tracking and reducing developer processing time by 80%.
+              </p>
+              <p class="timeline-text">
+              Fused dual LiDARs on a physical ground vehicle to enhance path planning and obstacle avoidance
+              </p>
+              <p class="timeline-text">
+              Diagnosed and rectified a major robotic design inefficiency, optimizing hardware and improving load-carrying
+              capacity by 25% while cutting production costs by 40%.
               </p>
 
             </li>
@@ -449,25 +516,40 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">George Washington University: M.S Data Science</h4>
+              <h4 class="h4 timeline-item-title">M.S. Data Science at George Washington University</h4>
 
-              <span>08/2023 — 05/2025</span>
+              <span>2023 - 2025</span>
 
               <p class="timeline-text">
-                Relevant Coursework: Intro to Data Science, Data Mining, Data warehousing, Cloud Computing, Deep Learning, Natural Language Processing
+                <strong>Relevant Subjects:</strong>
+                Machine Learning,
+                Deep Learning,
+                Data Mining,
+                Cloud Computing,
+                Data Visualization,
+                Data Warehousing,
+                Data Analytics
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">JNTUH: Electronics and Communicaitons Engineering</h4>
+              <h4 class="h4 timeline-item-title">B.Tech. Electronics and Communications at JNTUH</h4>
 
-              <span>06/2018 — 08/2022</span>
+              <span>2018 - 2022</span>
 
               <p class="timeline-text">
-                Relevant Coursework: DBMS, C, Python, Data Communicaitons and Networks, Java
-
+                <strong>Relevant Subjects:</strong>
+                Data Structures,
+                Algorithms,
+                Computer Networks,
+                Operating Systems,
+                Database Management Systems,
+                Digital Signal Processing,
+                Machine Learning,
+                Deep Learning,
+                Computer Vision
               </p>
 
             </li>
@@ -476,158 +558,106 @@
 
         </section>
 
+      </article>
 
-        <!-- <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
 
-          <ul class="skills-list content-card">
+      <!-- 
+      - #SKILLS
+      -->
+      <article class="skills" data-page="skills">
 
-            <li class="skills-item">
+        <br><br>
+        <header>
+          <h2 class="h2 article-title">Skills</h2>
+        </header>
 
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section> -->
-<!-- 
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My Skills</h3>
-        
-          <ul class="skills-list content-card">
-        
-            <li class="skills-item">
-              <div class="skill-box">Web Design</div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="skill-box">Graphic Design</div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="skill-box">Branding</div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="skill-box">WordPress</div>
-            </li>
-        
-          </ul>
-        
-        </section>-->
-
+        <section class="skills-container">
+          
+          <!-- Languages -->
+          <div class="skills-box">
+            <h3 class="h3 skills-title">Languages</h3>
+            <div class="skills-grid">
+              <div class="skill-box">Python</div>
+              <div class="skill-box">R</div>
+              <div class="skill-box">SQL</div>
+            </div>
+          </div>
       
-
-
-      <section class="skills-container">
-        <!-- Framework Section -->
-        <div class="skills-box">
-          <h3 class="h3 skills-title">DL Frameworks</h3>
-          <div class="skills-grid">
-            <div class="skill-box">Tensorflow</div>
-            <div class="skill-box">PyTorch</div>
-            <div class="skill-box">Scikit-Learn</div>
+          <!-- Scientific Computing & Data Analysis -->
+          <div class="skills-box">
+            <h3 class="h3 skills-title">Scientific Computing & Data Analysis</h3>
+            <div class="skills-grid">
+              <div class="skill-box">NumPy</div>
+              <div class="skill-box">SciPy</div>
+              <div class="skill-box">Pandas</div>
+            </div>
           </div>
-        </div>
       
-        <!-- Cloud Skills -->
-        <div class="skills-box">
-          <h3 class="h3 skills-title">Cloud</h3>
-          <div class="skills-grid">
-            <div class="skill-box">AWS</div>
+          <!-- Data Visualization -->
+          <div class="skills-box">
+            <h3 class="h3 skills-title">Data Visualization</h3>
+            <div class="skills-grid">
+              <div class="skill-box">Matplotlib</div>
+              <div class="skill-box">Seaborn</div>
+              <div class="skill-box">Plotly</div>
+            </div>
           </div>
-        </div>
       
-        <!-- Data Analysis Skills Section -->
-        <div class="skills-box">
-          <h3 class="h3 skills-title">Data Analysis & Visualization</h3>
-          <div class="skills-grid">
-            <div class="skill-box">Pandas</div>
-            <div class="skill-box">Tableau</div>
-            <div class="skill-box">Seaborn</div>
-            <div class="skill-box">Matplotlib</div>
-            <div class="skill-box">Plotly</div>
+          <!-- Databases, Cloud & Big Data -->
+          <div class="skills-box">
+            <h3 class="h3 skills-title">Databases, Cloud & Big Data</h3>
+            <div class="skills-grid">
+              <div class="skill-box">MySQL</div>
+              <div class="skill-box">MongoDB</div>
+              <div class="skill-box">AWS (EC2, S3, SageMaker, QuickSight)</div>
+              <div class="skill-box">Hadoop</div>
+              <div class="skill-box">PySpark</div>
+            </div>
           </div>
-        </div>
       
-        <!-- Programming Skills Section -->
-        <div class="skills-box">
-          <h3 class="h3 skills-title">Programming Skills</h3>
-          <div class="skills-grid">
-            <div class="skill-box">Python</div>
-            <div class="skill-box">C</div>
+          <!-- Tools & Version Control -->
+          <div class="skills-box">
+            <h3 class="h3 skills-title">Tools & Version Control</h3>
+            <div class="skills-grid">
+              <div class="skill-box">Docker</div>
+              <div class="skill-box">Git</div>
+              <div class="skill-box">GitHub</div>
+              <div class="skill-box">SVN</div>
+            </div>
           </div>
-        </div>
-
-        <div class="skills-box">
-          <h3 class="h3 skills-title">Scraping & Automation</h3>
-          <div class="skills-grid">
-            <div class="skill-box">Beautiful Soup</div>
-            <div class="skill-box">Selenium</div>
+      
+          <!-- Robotics & Navigation -->
+          <div class="skills-box">
+            <h3 class="h3 skills-title">Robotics & Navigation</h3>
+            <div class="skills-grid">
+              <div class="skill-box">SLAM (2D & 3D)</div>
+              <div class="skill-box">Web Crawlers</div>
+              <div class="skill-box">BeautifulSoup</div>
+            </div>
           </div>
-        </div>
-        
-      </section>
-
-    </article> 
+      
+          <!-- Other -->
+          <div class="skills-box">
+            <h3 class="h3 skills-title">Other</h3>
+            <div class="skills-grid">
+              <div class="skill-box">Linux</div>
+              <div class="skill-box">PyQt5</div>
+            </div>
+          </div>
+      
+        </section>
+      
+      </article>
 
       <!--
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
-
+      <article class="projects" data-page="projects">
+        <br><br>
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
         <section class="projects">
@@ -635,20 +665,20 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <!-- <li class="filter-item">
-              <button data-filter-btn>Data Analytics</button>
-            </li>
-
-            <li class="filter-item">  
-              <button data-filter-btn>Data Science</button>
+              <button class="active" data-filter-btn>Web Development</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Cloud Computing</button>
-            </li> -->
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
 
           </ul>
 
@@ -670,7 +700,17 @@
                 <button data-select-item>All</button>
               </li>
 
-            
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
 
             </ul>
 
@@ -679,80 +719,78 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://github.com/BVishal-Geek/Alcohol-Classification" target="_blank">
+              <a href="https://github.com/BVishal-Geek/IntelliWiz" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Alcohol-classification.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/multi-agent.png" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Alcohol-Classification</h3>
+                <h3 class="project-title">Multi-Agent Data Preprocessing and Report Generation (Ongoing Research)</h3>
 
-                <p class="project-category">Data Analysis & Model Building</p>
+                <p class="project-category">AI Agents</p>
 
               </a>
             </li>
-
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://github.com/BVishal-Geek/Alcohol-Classification" target="_blank">
+              <a href="https://github.com/BVishal-Geek/DeepFaceAuthentication" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Alcohol-classification.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/MFA.png" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Alcohol-Classification</h3>
+                <h3 class="project-title">Multi Factor Authentication using Facial Recognition (Ongoing Research)</h3>
 
-                <p class="project-category">Data Analysis & Model Building</p>
+                <p class="project-category">Deep Learning and Computer Vision</p>
 
               </a>
             </li>
-
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://github.com/BVishal-Geek/Alcohol-Classification" target="_blank">
+              <a href="https://github.com/BVishal-Geek/Deep-Fake-Video-Classification" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Alcohol-classification.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/Deep Fake.png" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Alcohol-Classification</h3>
+                <h3 class="project-title">Deep Fake Video classification</h3>
 
-                <p class="project-category">Data Analysis & Model Building</p>
+                <p class="project-category">Deep Learning</p>
 
               </a>
             </li>
 
-            <!-- <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/BVishal-Geek/Cloud-SageMaker" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/Bank Churn.png" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">Bank Churn Analysis using AWS</h3>
 
-                <p class="project-category">Data Analytics</p>
+                <p class="project-category">Machine Learning and Visualization</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Data Analytics">
+            <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
 
                 <figure class="project-img">
@@ -763,9 +801,9 @@
                   <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Fundo</h3>
+                <h3 class="project-title">New York Airbnb Review Analysis</h3>
 
-                <p class="project-category">Data Analytics</p>
+                <p class="project-category">Natural Language Processing and Visualization</p>
 
               </a>
             </li>
@@ -781,14 +819,14 @@
                   <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">K-means Clustering on Spotify Data</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category">Machine Learning, Big Data and Visualization</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Data Analytics">
+            <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
 
                 <figure class="project-img">
@@ -799,14 +837,14 @@
                   <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
                 </figure>
 
-                <h3 class="project-title">DSM.</h3>
+                <h3 class="project-title">Alcohol-Classification</h3>
 
-                <p class="project-category">Data Analytics</p>
+                <p class="project-category">Machine Learning and Visualization</p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Data Analytics">
+            <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
 
                 <figure class="project-img">
@@ -817,9 +855,9 @@
                   <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">MetaSpark</h3>
+                <h3 class="project-title">Asteroid Hazard Classification</h3>
 
-                <p class="project-category">Data Analytics</p>
+                <p class="project-category">Machine Learning and Visualization</p>
 
               </a>
             </li>
@@ -835,9 +873,9 @@
                   <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Summary</h3>
+                <h3 class="project-title">Patient Survival Analysis</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Visualization</p>
 
               </a>
             </li>
@@ -853,9 +891,9 @@
                   <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Task Manager</h3>
+                <h3 class="project-title">Robot Controller using PyQt5</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category">Robotics and Computer Vision</p>
 
               </a>
             </li>
@@ -876,7 +914,7 @@
                 <p class="project-category">Web development</p>
 
               </a>
-            </li> -->
+            </li>
 
           </ul>
 
@@ -885,24 +923,21 @@
       </article>
 
 
-
       <!--
         - #CONTACT
       -->
 
       <article class="contact" data-page="contact">
-
+        <br><br>
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
-
-    
 
         <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="mailto:vishal.bakshi@gwu.edu" method="post" enctype="text/plain">
+          <form action="mailto:vishal.bakshi@gwu.edu" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -912,7 +947,7 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" data-form-btn>
+            <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>

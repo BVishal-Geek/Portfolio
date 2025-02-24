@@ -179,6 +179,8 @@ article {
   margin: 16px 0;
 }
 
+
+
 .icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -323,7 +325,9 @@ main {
 
 
 
-
+.skills-title {
+  text-align: left;
+}
 
 /*-----------------------------------*\
   #SIDEBAR
