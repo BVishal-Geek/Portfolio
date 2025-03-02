@@ -1729,7 +1729,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .navbar-link {
   cursor: pointer;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -1748,7 +1748,60 @@ article[data-page].active {
   display: block;
 }
 
+/* Open Source Contributions Section */
+/* Open Source Contributions Section */
+.contributions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centers the items */
+  align-items: center;
+  text-align: center;
+}
 
+.contribution-item {
+  width: 350px; /* Adjust width */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contribution-img {
+  width: 100%;
+  max-width: 350px; /* Increase image size */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.contribution-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.contribution-title {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* White text */
+}
+
+/* View Contribution Button */
+.view-contribution {
+  display: inline-block;
+  background-color: #007bff; /* Blue color similar to your button */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.view-contribution:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
 
   /**
    * CONTACT
