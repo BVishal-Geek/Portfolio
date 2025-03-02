@@ -948,10 +948,18 @@ main {
 }
 
 /* Unique border colors for each box */
-.skills-box:nth-child(1) .skill-box { border-color: #007bff; } /* Frontend */
-.skills-box:nth-child(2) .skill-box { border-color: #f0ad4e; } /* Backend */
-.skills-box:nth-child(3) .skill-box { border-color: #5cb85c; } /* Cloud */
-.skills-box:nth-child(4) .skill-box { border-color: #d9534f; } /* Data Analysis */
+.skills-box:nth-child(1) .skill-box { border-color: #007bff; } 
+.skills-box:nth-child(2) .skill-box { border-color: #f0ad4e; } 
+.skills-box:nth-child(3) .skill-box { border-color: #5cb85c; } 
+.skills-box:nth-child(4) .skill-box { border-color: #d9534f; } 
+.skills-box:nth-child(5) .skill-box { border-color: #5bc0de; }
+
+.skills-box:nth-child(6) .skill-box { border-color: #007bff; }
+.skills-box:nth-child(7) .skill-box { border-color: #f0ad4e; }
+.skills-box:nth-child(8) .skill-box { border-color: #5cb85c; }
+.skills-box:nth-child(9) .skill-box { border-color: #d9534f; }
+
+  
 
 
 
@@ -1749,58 +1757,72 @@ article[data-page].active {
 }
 
 /* Open Source Contributions Section */
-/* Open Source Contributions Section */
-.contributions {
+/* Container for the entire section */
+.contribution-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center; /* Centers the items */
-  align-items: center;
-  text-align: center;
-}
-
-.contribution-item {
-  width: 350px; /* Adjust width */
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.contribution-img {
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Spread items evenly */
+  gap: 40px; /* Space between image and text */
   width: 100%;
-  max-width: 350px; /* Increase image size */
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px; /* Optional: Rounded corners */
+  max-width: 1200px; /* Maintain responsiveness */
+  margin: 0 auto; /* Center align */
+  padding: 20px 0;
+}
+
+/* Left section (image & button) */
+.contribution-left {
+  flex: 1;
+  max-width: 40%; /* Adjust width */
+  text-align: center;
 }
 
 .contribution-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.contribution-title {
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white; /* White text */
+  width: 100%; /* Make image responsive */
+  max-width: 350px; /* Limit image size */
+  border-radius: 10px;
 }
 
 /* View Contribution Button */
 .view-contribution {
   display: inline-block;
-  background-color: #007bff; /* Blue color similar to your button */
-  color: white; /* White text */
-  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 22px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 15px;
+  transition: background 0.3s ease-in-out;
 }
 
 .view-contribution:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+}
+
+/* Right section (text) */
+.contribution-right {
+  flex: 1;
+  max-width: 55%;
+  text-align: justify;
+  color: white;
+  font-size: 7px;
+  line-height: 1.6;
+}
+
+/* Contribution Title */
+.contribution-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Ensure text is fully visible */
+.contribution-motivation {
+  text-align: justify;
+  color: white;
+  font-size: 14px;
+  max-width: 100%;
 }
 
   /**

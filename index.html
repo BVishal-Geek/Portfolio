@@ -585,6 +585,19 @@
               <div class="skill-box">SQL</div>
             </div>
           </div>
+
+          <!-- Frameworks -->
+           <div class="skills-box">
+            <h3 class="h3 skills-title">Frameworks</h3>
+            <div class="skills-grid">
+              <div class="skill-box">TensorFlow</div>
+              <div class="skill-box">PyTorch</div>
+              <div class="skill-box">Scikit-Learn</div>
+              <div class="skill-box">Keras</div>
+              <div class="skill-box">Open CV</div>
+              
+            </div>
+           </div>
       
           <!-- Scientific Computing & Data Analysis -->
           <div class="skills-box">
@@ -634,8 +647,8 @@
             <h3 class="h3 skills-title">Robotics & Navigation</h3>
             <div class="skills-grid">
               <div class="skill-box">SLAM (2D & 3D)</div>
-              <div class="skill-box">Web Crawlers</div>
-              <div class="skill-box">BeautifulSoup</div>
+              <div class="skill-box">Robot Operating System (ROS)</div>
+              <div class="skill-box">Navigation (Odometry, IMU, GPS)</div>
             </div>
           </div>
       
@@ -645,6 +658,7 @@
             <div class="skills-grid">
               <div class="skill-box">Linux</div>
               <div class="skill-box">PyQt5</div>
+              <div class="skill-box">BeautifulSoup</div>
             </div>
           </div>
       
@@ -657,28 +671,43 @@
       -->
 
       
-      <!--
-  - #OPEN SOURCE CONTRIBUTIONS
--->
+              <!--
+          - #OPEN SOURCE CONTRIBUTIONS
+        -->
+        <article class="open-source-contribution" data-page="open source contribution">
+          <br><br>
+          <header>
+              <h2 class="h2 article-title">Open Source Contribution</h2>
+          </header>
 
-      <article class="open source contribution" data-page="open source contribution">
-        <br><br>
-        <header>
-          <h2 class="h2 article-title">Open Source Contribution</h2>
-        </header>
+          <section class="contributions">
+              <div class="contribution-container">
+                  
+                  <!-- Left Section: Image & Button -->
+                  <div class="contribution-left">
+                      <a href="https://github.com/deepinsight/insightface/pull/2731" target="_blank">
+                          <figure class="contribution-img">
+                              <img src="./assets/images/contributions1.jpeg" alt="Contribution 1" loading="lazy">
+                          </figure>
+                      </a>
+                      <a href="https://github.com/deepinsight/insightface/pull/2731" target="_blank" class="view-contribution">View Contribution</a>
+                  </div>
 
-        <section class="contributions">
-          <div class="contribution-item">
-            <a href="https://github.com/deepinsight/insightface/pull/2731" target="_blank">
-              <figure class="contribution-img">
-                <img src="./assets/images/contributions1.jpeg" alt="Contribution 1" loading="lazy">
-              </figure>
-            </a>
-            <h3 class="contribution-title">Insightface Library setup.py contribution</h3>
-            <a href="https://github.com/deepinsight/insightface/pull/2731" target="_blank" class="view-contribution">View Contribution</a>
-          </div>
-        </section>
-      </article>
+                  <!-- Right Section: Contribution Text -->
+                  <div class="contribution-right">
+                      <h3 class="contribution-title">Insightface Library setup.py contribution</h3>
+                      <p class="contribution-motivation">
+                          While working on my project using Insightface, I ran into installation issues on macOS due to missing developer tools like LLVM & OpenMP, which don’t come pre-installed on Mac.  
+                          <br><br>
+                          I spent nearly 5 hours debugging and fixing the issue locally, ensuring everything worked smoothly. Instead of letting other Mac users struggle with the same problem, I decided to contribute a fix to the library.  
+                          <br><br>
+                          This led to my first open-source PR, which was recently accepted and merged! 🚀
+                      </p>
+                  </div>
+
+              </div>
+          </section>
+        </article>
 
       <!--
         - #PORTFOLIO
