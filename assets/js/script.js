@@ -159,3 +159,25 @@ formInputs.forEach(input => {
         }
     });
 });
+
+
+let message = " 🌟 Hire Vishal, He is an excellent developer 🌟 ";
+let position = 0;
+let originalTitle = "Vishal Bakshi";
+
+let interval;
+
+function scrollTitle() {
+    document.title = message.substring(position) + message.substring(0, position);
+    position = (position + 3) % message.length;
+    interval = setTimeout(scrollTitle, 200);
+}
+
+document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+        scrollTitle(); // Start scrolling message when user leaves the tab
+    } else {
+        clearTimeout(interval); // Stop scrolling when user returns
+        document.title = originalTitle; // Restore original title
+    }
+});
